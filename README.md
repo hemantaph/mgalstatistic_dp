@@ -8,9 +8,11 @@ A) Summary:
 If SNRthresh is set to 8 (default), it allows one to choose only those pairs from a given pair combination (e.g. 31 ) where the fainter lensed image (e.g. image 3) is above networkSNR of 8.
 If SNRthresh is set to 0 in snr\*.py, then all those quads where the 2nd brightest lensed image will have networkSNR > 8 are used in the calculation.
 
-3. unlensedpairs - comprise of the distributions for the unlensed pair population
-   gwevents_O3 - comprise of info on event pairs taken from Table 3 of Abbott et al. 2021 (o3a lensing paper)
-   out_fincat\_\* - comprise of the distributions for the lensed pair population for various detectors (see further details below). 
+3. a) unlensedpairs - comprise of the distributions for the unlensed pair population
+   
+   b) gwevents_O3 - comprise of info on event pairs taken from Table 3 of Abbott et al. 2021 (o3a lensing paper)
+   
+   c) out_fincat\_\* - comprise of the distributions for the lensed pair population for various detectors (see further details below). 
 
 
 

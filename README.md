@@ -19,10 +19,10 @@ If SNRthresh is set to 0 in snr\*.py, then all those quads where the 2nd brighte
 
 B) Below is the explanation for each directory for the lens population
 
-1. AL - Advanced LIGO (3-detector - 1 year observing run)
-2. Ap - Aplus (3-detector - 1 year observing run)
-3. CE - Cosmic Explorer (single detector - 1 year long observing run)
-4. ET - Einstein Telescope  (single detector - 1 year long observing run)
+1. out_fincat_AL - Advanced LIGO (3-detector - 1 year observing run)
+2. out_fincat_Ap - Aplus (3-detector - 1 year observing run)
+3. out_fincat_CE - Cosmic Explorer (single detector - 1 year long observing run)
+4. out_fincat_ET - Einstein Telescope  (single detector - 1 year long observing run)
 
    Each of the above directory contains -
 
@@ -33,7 +33,7 @@ B) Below is the explanation for each directory for the lens population
    c) doubly lensed image properties - ID, img_pos_x (arcsec), img_pos_y (arcsec), img_magnification, time_delay (days), parity 
 
 
-5. O3 - LIGO-Virgo O3a observing run (3 detector - 6 months)
+5. out_fincat_O3 - LIGO-Virgo O3a observing run (3 detector - 6 months)
 
    This directory contains (one extra column compared) -
    
@@ -50,7 +50,7 @@ Definitions, units and conventions:
 * src_ID is an additional object identifier used only for O3 dir. Cross-match between the lens and image catalogs will require matching both ID and src_ID.
 * Position angle is measured counter-clockwise in deg where North is up - 0deg, East is left - 90deg
 * Positions are in arcsec relative to the lens galaxy at the center (0,0)
-* Magnification factors are absolute meaning they are with respect to the source flux/intensity. In other words, unlensed SNR * magnification factor gives the lensed image SNR given the sensitivity of a detector
+* Magnification factors are absolute meaning they are with respect to the source flux/intensity. In other words, unlensed SNR x magnification factor gives the lensed image SNR given the sensitivity of a detector
 * Time delays are given in days relative to the image arriving first. The first image (type I) thus have a time delay of 0. 
 * Parity: 1: positive parity corresponds to type I/ minimum  
   -1: negative parity corresponds to type II/saddle

@@ -9,16 +9,22 @@ Below is the explanation for each directory.
 4. ET - Einstein Telescope  (single detector - 1 year long observing run)
 
 Each of the above directory contains -
+
 a) lens catalog - ID, lens redshift, lens velocity dispersion (km/s), lens ellipticity, lens position angle (deg ), source redshift, source unlensed SNR, num_of_images (2-double, 4-quad) 
+
 b) quadruply lensed image properties - ID, img_pos_x (arcsec), img_pos_y (arcsec), img_magnification, time_delay (days), parity 
+
 c) doubly lensed image properties - ID, img_pos_x (arcsec), img_pos_y (arcsec), img_magnification, time_delay (days), parity 
 
 
 5. O3 - LIGO-Virgo O3a observing run (3 detector - 6 months)
 
 This directory contains (one extra column compared) -
+
 a) lens catalog - ID, src_ID, lens redshift, lens velocity dispersion (km/s), lens ellipticity, lens position angle (deg ), source redshift, source unlensed SNR, num_of_images (2-double, 4-quad)  
+
 b) quadruply lensed image properties - ID, img_pos_x (arcsec), img_pos_y (arcsec), img_magnification, time_delay (days), parity, src_ID 
+
 c) doubly lensed image properties - ID, img_pos_x (arcsec), img_pos_y (arcsec), img_magnification, time_delay (days), parity, src_ID
 
 
@@ -28,7 +34,7 @@ Units and conventions:
 * src_ID is an additional object identifier used only for O3 dir. Cross-match between the lens and image catalogs will require matching both ID and src_ID.
 * Position angle : North is up - 0deg, East is left - 90deg
 * Positions are relative to the lens galaxy at the center (0,0) in arcsec
-* Magnification factors are absolute i.e. with respect to the source flux/intensity
+* Magnification factors are absolute meaning they are with respect to the source flux/intensity. In other words, unlensed SNR * magnification factor gives the lensed image SNR given the sensitivity of a detector
 * Time delays are relative to the image arriving first. The first image (type I) thus have a time delay of 0. 
 * Parity: 1: positive parity corresponds to type I/ minimum  
   -1: negative parity corresponds to type II/saddle.

@@ -1,4 +1,4 @@
-These are data products from the paper - More & More 2021 (see arxiv - TBD)
+These are data products from the paper - More & More 2021 (see arxiv - https://arxiv.org/abs/2111.03091). Please cite this work if you use these resources.
 
 A) Summary:
 
@@ -8,7 +8,7 @@ A) Summary:
 If SNRthresh is set to 8 (default), it allows one to choose only those pairs from a given pair combination (e.g. 31 ) where the fainter lensed image (e.g. image 3) is above networkSNR of 8.
 If SNRthresh is set to 0 in snr\*.py, then all those quads where the 2nd brightest lensed image will have networkSNR > 8 are used in the calculation.
 
-3. a) unlensedpairs - comprise of the distributions for the unlensed pair population
+3. a) unlensedpairs - comprise of the distributions for the unlensed pair population; The unlensed population for O3 is added in the dir "unlensedpop"
    
    b) gwevents_O3 - comprise of info on event pairs taken from Table 3 of Abbott et al. 2021 (o3a lensing paper)
    

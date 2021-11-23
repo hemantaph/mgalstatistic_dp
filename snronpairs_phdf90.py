@@ -32,6 +32,12 @@ def getsnr_forpairs(det):
           dbtdel2= dbtdel[indx1][1] 
           dbmag1 = dbmag[indx1][0]         
           dbmag2 = dbmag[indx1][1]
+
+          dbmin21 = min(np.absolute(dbmag2),np.absolute(dbmag1)) 
+
+          if( np.sqrt(dbmin21)*uSNR[ii] > SNRthresh ):
+             mag_rat.append(-dbmag2/dbmag1 )
+             tdel_rat.append( dbtdel2 )
        else:
           ## quad
           qdtdel2=qdtdel[indx][1] 
@@ -49,7 +55,6 @@ def getsnr_forpairs(det):
           qdmin32 = min(np.absolute(qdmag3),np.absolute(qdmag2)) 
           qdmin41 = min(np.absolute(qdmag4),np.absolute(qdmag1)) 
           qdmin31 = min(np.absolute(qdmag3),np.absolute(qdmag1)) 
-          dbmin21 = min(np.absolute(dbmag2),np.absolute(dbmag1)) 
 
 
           if( np.sqrt(qdmin42)*uSNR[ii] > SNRthresh ):
@@ -68,9 +73,6 @@ def getsnr_forpairs(det):
              mag_rat.append( -qdmag3/qdmag1 )
              tdel_rat.append( qdtdel3 )
    
-          if( np.sqrt(dbmin21)*uSNR[ii] > SNRthresh ):
-             mag_rat.append(-dbmag2/dbmag1 )
-             tdel_rat.append( dbtdel2 )
           
    mag_rat=np.array(mag_rat)
    tdel_rat=np.array(tdel_rat)

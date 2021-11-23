@@ -6,7 +6,7 @@ import pylab as plt
 ## O3
 
 def get_tdmag(det,nn, Ntot,batchtime=3.1536e7):
-   td,dist= np.loadtxt("../unlensed/all_bbh_unlensprop_%s.txt"%(det),usecols=(7,8),unpack=1)
+   td,dist= np.loadtxt("all_bbh_unlensprop_%s.txt"%(det),usecols=(7,8),unpack=1)
    
    idx = (td>=(nn)*batchtime) & (td<=(nn+1)*batchtime)
    td1 = td[idx]
